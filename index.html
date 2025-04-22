@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inclusive Categories</title>
+  <title>Nuj Application Form</title>
   <style>
     * {
       box-sizing: border-box;
@@ -107,7 +107,7 @@
   </style>
 </head>
 <body>
-  <h1>Select a Target Group</h1>
+  <h1>Nuj Application Form</h1>
   <div class="categories">
     <a class="card" onclick="showForm('Racial Minorities')">
       <h2>Racial Minorities</h2>
@@ -136,23 +136,23 @@
     <form id="applicationForm">
       <div class="form-group">
         <label for="fullName">Full Name</label>
-        <input type="text" id="fullName" name="fullName" required />
+        <input type="text" id="fullName" name="fullName" required placeholder="First name / Last name"/>
       </div>
       <div class="form-group">
         <label for="location">Where do you live?</label>
-        <input type="text" id="location" name="location" required />
+        <input type="text" id="location" name="location" required placeholder="Ex: NYC, America"/>
       </div>
       <div class="form-group">
         <label for="contact">Phone Number and Email</label>
-        <input type="text" id="contact" name="contact" required />
+        <input type="text" id="contact" name="contact" required placeholder="Ex: 08********** / youremailhere@gmail.com" />
       </div>
       <div class="form-group">
         <label for="reason">Why do you pick this job?</label>
-        <textarea id="reason" name="reason" rows="3" required></textarea>
+        <textarea id="reason" name="reason" rows="3" required placeholder="Please enter a valid reason"></textarea>
       </div>
       <div class="form-group">
         <label for="skills">What are your skills?</label>
-        <textarea id="skills" name="skills" rows="3" required></textarea>
+        <textarea id="skills" name="skills" rows="3" required placeholder="Ex: Marketting, Pottery making, Fund raising"></textarea>
       </div>
       <div class="form-group">
         <label>
