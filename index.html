@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inclusive Categories</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+      padding: 2rem;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    }
+
+    .card h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Select a Target Group</h1>
+  <div class="categories">
+    <a class="card" onclick="showForm('Racial Minorities')">
+      <h2>Racial Minorities</h2>
+      <p>Support and resources for Black people, Indigenous people, and other ethnic minorities.</p>
+    </a>
+    <a class="card" onclick="showForm('People with Disabilities')">
+      <h2>People with Disabilities</h2>
+      <p>Information and communities for blind, deaf, and differently abled individuals.</p>
+    </a>
+    <a class="card" onclick="showForm('Linguistic Minorities')">
+      <h2>Linguistic Minorities</h2>
+      <p>Help for immigrants and non-native speakers facing language barriers.</p>
+    </a>
+    <a class="card" onclick="showForm('Gender & Sexual Minorities')">
+      <h2>Gender & Sexual Minorities</h2>
+      <p>Support for LGBTQ+ individuals and gender-diverse communities.</p>
+    </a>
+    <a class="card" onclick="showForm('Socioeconomic Minorities')">
+      <h2>Socioeconomic Minorities</h2>
+      <p>Resources for people facing poverty, debt, or financial hardship.</p>
+    </a>
+  </div>
+
+  <div id="formSection" class="form-container hidden">
+    <h2>Application Form</h2>
+    <form id="applicationForm">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required />
+      </div>
+      <div class="form-group">
+        <label for="location">Where do you live?</label>
+        <input type="text" id="location" name="location" required />
+      </div>
+      <div class="form-group">
+        <label for="contact">Phone Number and Email</label>
+        <input type="text" id="contact" name="contact" required />
+      </div>
+      <div class="form-group">
+        <label for="reason">Why do you pick this job?</label>
+        <textarea id="reason" name="reason" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="skills">What are your skills?</label>
+        <textarea id="skills" name="skills" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" required /> I agree to the terms and conditions.
+        </label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function showForm(category) {
+      document.getElementById('formSection').classList.remove('hidden');
+      document.getElementById('formSection').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
